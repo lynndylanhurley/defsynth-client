@@ -22,7 +22,11 @@ angular.module('defsynthApp')
         url: '/terms'
         templateUrl: 'terms.html'
 
-      .state 'components',
+      .state 'admin',
+        url: '/admin'
+        abstract: true
+
+      .state 'admin.components',
         url: '/components'
         templateUrl: 'pages/components/index.html'
         controller: 'ComponentsCtrl'

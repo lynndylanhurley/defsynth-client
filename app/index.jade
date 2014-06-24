@@ -9,6 +9,11 @@ html.no-js
     base(href='/')
     meta(name='fragment', content='!')
     link(rel='shortcut icon', href='/favicon.ico?v=2')
+    link(
+      href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,500,900' 
+      rel='stylesheet' 
+      type='text/css'
+    )
 
     script.
       window.CONFIG = @@GLOBALS;
@@ -45,9 +50,7 @@ html.no-js
               type='button'
               ng-click='collapse = !collapse'
             )
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
+              i.fa.fa-ellipsis-v
 
           #top-nav-collapse.collapse.navbar-collapse(
             ng-class='{in: collapse}'

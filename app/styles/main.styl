@@ -27,6 +27,46 @@ html, body
     transition-property opacity
     transition-duration 0.5s
 
+body
+  .wrap
+    .navbar.navbar-fixed-top
+      background linear-gradient(top, #fff 66%, transparent)
+      padding-bottom 25px
+      border-bottom 0
+
+      .navbar-brand
+        background rgb(100, 100, 100)
+        color #fff
+        text-transform uppercase
+        letter-spacing 2.5px
+        font-weight 200
+        font-family 'Source Code Pro'
+
+      .navbar-toggle
+        color rgb(130, 130, 130)
+        font-size 28px
+        padding 0 20px 0 20px
+        border 0
+        margin-right 0
+        margin-top 0
+        border-radius 0
+        height header-height
+        position absolute
+        right 0
+
+        &:focus
+          color rgb(130, 130, 130)
+          background transparent
+
+
+        &:hover
+          background rgb(130, 130, 130)
+          color #fff
+
+    #top-nav-collapse
+      background #fff
+      box-shadow 0 4px 6px 0px (rgba(0, 0, 0, 0.1))
+
 
 .browsehappy
   margin 0.2em 0

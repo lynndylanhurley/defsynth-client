@@ -58,6 +58,20 @@ html.no-js
               li(ui-sref-active='active')
                 a(ui-sref='style-guide') Style Guide
 
+              li.auth.pull-right
+                a(
+                  ng-show='user.email'
+                  ng-click='logOut()'
+                )= 'Sign out '
+                  i.fa.fa-sign-out
+
+                a(
+                  ng-show='!user.email'
+                  ng-click='showAuthDialog()'
+                )= 'Sign in '
+                  i.fa.fa-sign-in
+
+
       .container#content
         div(ui-view)
 

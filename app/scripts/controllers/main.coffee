@@ -1,7 +1,18 @@
 angular.module('defsynthApp')
-  .controller 'MainCtrl', ($rootScope, $scope, $location, $state, $stateParams, usSpinnerService, $timeout) ->
+  .controller 'MainCtrl', (
+    $rootScope
+    $scope
+    $location
+    $state
+    $stateParams
+    usSpinnerService
+    $timeout
+    $defsynth
+  ) ->
     # cache element selectors
     $body = $('body')
+
+    $rootScope.logOut = -> $defsynth.logOut()
 
     # called on page change (ui-sref)
     $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->

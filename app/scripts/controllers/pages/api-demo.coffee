@@ -2,12 +2,12 @@ angular.module('defsynthApp')
   .controller 'ApiDemoCtrl', ($scope, $resource) ->
     console.log 'api demo ctrl'
 
-    synthResource = $resource('http://127.0.0.1:3000/synth_modules/:id', null, {
+    synthResource = $resource('http://'+CONFIG.apiUrl+'/synth_modules/:id', null, {
       'update': { method: 'PUT' }
     })
 
 
-    componentResource = $resource('http://127.0.0.1:3000/components/:id', null, {
+    componentResource = $resource('http://'+CONFIG.apiUrl+'/components/:id', null, {
       'update': { method: 'PUT' }
     })
 
@@ -25,8 +25,8 @@ angular.module('defsynthApp')
         url: 'http://defsynth.org'
         description: 'bang'
         components: [
-          {quantity: 1, component_id: 2}
-          {quantity: 2, component_id: 3}
+          {quantity: 1, component_id: 2, mpn: 'xxx', newarkSKU: 'yyy'}
+          {quantity: 2, component_id: 3, mpn: 'zzz', newarkSKU: 'abc'}
         ]
       })
         .$promise
@@ -35,7 +35,6 @@ angular.module('defsynthApp')
         )
 
       false
-
 
     $scope.postComponent = ->
       console.log 'posting component'

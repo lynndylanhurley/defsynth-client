@@ -12,12 +12,13 @@
     "lodash": "~2.4.1",
     "angular-motion": "~0.3.2",
     "bootstrap-additions": "~0.2.2",
-    "font-awesome": "~4.0.3",
+    "font-awesome": "~4.1.0",
     "angular-sanitize": "~1.2.15",
     "angular-spinner": "~0.4.0",
     "underscore.string": "git@github.com:epeli/underscore.string.git#c8ad9d42fe7ade4f17b0313f5fcd950af72f3fcb",
     "angular-local-storage": "~0.0.5",
-    "angular-resource": "~1.2.17"
+    "angular-resource": "~1.2.17",
+    "angular-cookies": "~1.3.0-build.2853"
   },
   "devDependencies": {},
   "overrides": {
@@ -30,5 +31,8 @@
     "Faker": {
       "main": "Faker.js"
     }
+  },
+  "resolutions": {
+    "angular": "1.3.0-beta.4"
   }
 }

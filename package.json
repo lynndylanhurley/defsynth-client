@@ -9,7 +9,7 @@
     "http-proxy": "~1.0.3"
   },
   "devDependencies": {
-    "gulp": "~3.5.0",
+    "gulp": "~3.8.0",
     "gulp-load-plugins": "~0.3.0",
     "gulp-util": "~2.2.14",
     "gulp-autoprefixer": "~0.0.6",
@@ -20,7 +20,7 @@
     "gulp-ruby-sass": "~0.3.0",
     "gulp-size": "~0.1.2",
     "gulp-connect": "~1.0.0",
-    "gulp-useref": "~0.3.0",
+    "gulp-useref": "~0.4.4",
     "wiredep": "~1.1.0",
     "gulp-jade": "~0.4.2",
     "gulp-coffee": "~1.4.1",

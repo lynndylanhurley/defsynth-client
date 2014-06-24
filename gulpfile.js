@@ -154,7 +154,8 @@ var injectGlobals = lazypipe()
       pattern: '@@GLOBALS',
       replacement: JSON.stringify({
         OCTOPART_KEY: config.OCTOPART_KEY,
-        NEWARK_KEY:   config.NEWARK_KEY
+        NEWARK_KEY:   config.NEWARK_KEY,
+        apiUrl:       config.API_URL
       })
     }
   ]);

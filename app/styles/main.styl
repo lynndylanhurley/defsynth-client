@@ -176,3 +176,88 @@ body
   sprite($logo)
   margin 0 auto
 
+primary = #888
+success = #7EB37E
+info    = #A8CCD6
+warning = #B3B36D
+danger  = #C48F8D
+
+
+.btn
+  border-radius 2px
+  //border solid 1px darken(primary, 0%)
+  border 0
+  //box-shadow 0 0 1px 1px primary
+  text-shadow 1px 1px 1px rgba(0, 0, 0, 0.4)
+
+.btn-primary
+  background linear-gradient(185deg, lighten(primary, 40%), primary)
+  border solid 1px transparent
+
+  &:hover
+    border solid 1px primary
+    background linear-gradient(185deg, lighten(primary, 50%), lighten(primary, 10%))
+
+
+.btn-default
+  background linear-gradient(185deg, #fff, #efefef)
+  border solid 1px darken(#efefef, 10%)
+  text-shadow 0 0 1px rgba(0, 0, 0, 0.3)
+  color #444
+
+  &:hover
+    border solid 1px darken(#efefef, 15%)
+    background linear-gradient(185deg, lighten(#eee, 50%), lighten(#eee, 10%))
+
+.btn-success
+  background linear-gradient(185deg, lighten(success, 40%), success)
+  border solid 1px transparent
+
+  &:hover
+    border solid 1px success
+    background linear-gradient(185deg, lighten(success, 50%), lighten(success, 10%))
+
+.btn-info
+  background linear-gradient(185deg, lighten(info, 40%), info)
+  border solid 1px transparent
+
+  &:hover
+    border solid 1px info
+    background linear-gradient(185deg, lighten(info, 50%), lighten(info, 10%))
+
+.btn-warning
+  background linear-gradient(185deg, lighten(warning, 40%), warning)
+  border solid 1px transparent
+
+  &:hover
+    border solid 1px warning
+    background linear-gradient(185deg, lighten(warning, 50%), lighten(warning, 10%))
+
+.btn-danger
+  background linear-gradient(185deg, lighten(danger, 40%), danger)
+  border solid 1px transparent
+
+  &:hover
+    border solid 1px danger
+    background linear-gradient(185deg, lighten(danger, 50%), lighten(danger, 10%))
+
+.well
+  position relative
+  padding 45px 15px 15px
+  margin 0 -15px 15px
+  background-color #fafafa
+  box-shadow inset 0 3px 6px rgba(0, 0, 0, 0.05)
+  border-color #e5e5e5 #eee #eee
+  border-style solid
+  border-width 1px 0
+  border-radius 0
+
+@media (min-width: 768px)
+  .well
+    margin-left 0
+    margin-right 0
+    background-color #fff
+    border-width 1px
+    border-color #ddd
+    border-radius 4px
+    box-shadow none

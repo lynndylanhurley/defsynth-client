@@ -28,9 +28,12 @@ html, body
     transition-duration 0.5s
 
 body
+  color #555
+  font-family "Source Sans Pro"
+
   .wrap
     .navbar.navbar-fixed-top
-      background linear-gradient(top, #fff 66%, transparent)
+      background linear-gradient(top, #fff 66%, rgba(255, 255, 255, 0))
       padding-bottom 25px
       border-bottom 0
 
@@ -67,6 +70,14 @@ body
       background #fff
       box-shadow 0 4px 6px 0px (rgba(0, 0, 0, 0.1))
 
+  small
+    font-weight 100
+
+  h1, h2, h3, h4, h5, h6, label, th
+    font-family "Open Sans"
+
+  button
+    letter-spacing 0.8px
 
 .browsehappy
   margin 0.2em 0

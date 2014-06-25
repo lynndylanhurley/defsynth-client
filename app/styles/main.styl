@@ -1,8 +1,9 @@
 footer-height = 60px
 header-height = 50px
+mobile-nav-width = 300px
 
 // sticky footer
-html, body
+html, body, .wrap-container
   height 100%
 
   &.loading #content
@@ -30,12 +31,36 @@ html, body
 body
   color #555
   font-family "Source Sans Pro"
+  overflow-x hidden
 
-  .wrap
-    .navbar.navbar-fixed-top
+  // necessary for side nav
+  .wrap-container
+    position relative
+    top 0
+    left 0
+
+    &.show-nav
+      .wrap, #mobile-nav, #footer, #header
+        transform translate3d(-(mobile-nav-width), 0, 0)
+
+      .wrap
+        #content
+          opacity 0.4
+          pointer-events none
+
+      #mobile-nav
+        box-shadow(-1px, 0, 6px, 1px, rgba(0, 0, 0, 0.1))
+
+        ul
+          opacity 1
+
+    #header
       background linear-gradient(top, #fff 66%, rgba(255, 255, 255, 0))
       padding-bottom 25px
       border-bottom 0
+      transition-property transform
+      transition-duration 0.5s
+      transform translate3d(0, 0, 0)
 
       .navbar-brand
         background rgb(100, 100, 100)
@@ -66,12 +91,67 @@ body
           background rgb(130, 130, 130)
           color #fff
 
-    #top-nav-collapse
-      background #fff
-      box-shadow 0 4px 6px 0px (rgba(0, 0, 0, 0.1))
+      #top-nav-collapse
+        background #fff
+        box-shadow 0 4px 6px 0px (rgba(0, 0, 0, 0.1))
+
+    .wrap
+      transition-property transform
+      transition-duration 0.5s
+      transform translate3d(0, 0, 0)
+      pointer-events auto
+
+
+    #mobile-nav
+      transition-property box-shadow, transform
+      transition-duration 0.5s
+      transform translate3d(0, 0, 0)
+      box-shadow(0, 0, 0, 0, rgba(0, 0, 0, 0))
+      position fixed
+      top 0
+      left 100%
+      width mobile-nav-width
+      background #444
+      height 100%
+      text-align left
+
+      ul
+        transition-property opacity
+        transition-duration 0.5s
+        opacity 1
+        width 100%
+
+        li
+          a
+            font-family "Open Sans"
+            text-transform uppercase
+            letter-spacing 1.5px
+            border-radius 0
+            color #fff
+            padding 30px 20px
+
+            &:hover
+              background transparent
+              color #ddd
+
+          &.active
+            a
+              background linear-gradient(right, #ccc, #fff)
+              color #444
+
+
+    #footer
+      transition-property box-shadow, transform
+      transition-duration 0.5s
+      transform translate3d(0, 0, 0)
+      padding-top 19px
+      color #777
+      border-top 1px solid #e5e5e5
+
 
   small
     font-weight 100
+
 
   h1, h2, h3, h4, h5, h6, label, th
     font-family "Open Sans"
@@ -96,8 +176,3 @@ body
   sprite($logo)
   margin 0 auto
 
-
-#footer
-  padding-top 19px
-  color #777
-  border-top 1px solid #e5e5e5

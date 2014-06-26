@@ -108,7 +108,8 @@ gulp.task('sprites', function() {
       name:      'sprite.png',
       style:     'sprite.styl',
       cssPath:   '/images',
-      processor: 'stylus'
+      processor: 'stylus',
+      retina:    true
     }))
     .pipe($.if('*.png', gulp.dest('.tmp/images')))
     .pipe($.if('*.styl', gulp.dest('.tmp/styles')))

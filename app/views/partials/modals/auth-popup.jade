@@ -1,10 +1,16 @@
-ul.row.auth-options
-  li.col-sm-4
-    button.btn.btn-primary.btn-lg.github(ng-click='githubLogin()')
-      i.fa.fa-github-alt
-  li.col-sm-4
-    button.btn.btn-primary.btn-lg.facebook(ng-click='facebookLogin()')
-      i.fa.fa-facebook
-  li.col-sm-4
-    button.btn.btn-primary.btn-lg.google(ng-click='googleLogin()')
-      i.fa.fa-google
+.auth-dialog
+  ul.row.auth-options
+    li.col-xs-4(ng-click='githubLogin()')
+      button.btn.btn-primary.btn-lg.github
+        i.fa.fa-github-alt
+      a github
+
+    li.col-xs-4(ng-click='facebookLogin()')
+      button.btn.btn-primary.btn-lg.facebook
+        i.fa.fa-facebook
+      a facebook
+
+    li.col-xs-4(ng-click='googleLogin()')
+      button.btn.btn-primary.btn-lg.google
+        i.fa.fa-google
+      a google
